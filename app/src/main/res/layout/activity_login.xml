@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/toolbar"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        tools:context=".activity.LoginActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayoutMiddle"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginTop="80dp">
+
+            <RelativeLayout
+                android:id="@+id/rel_top"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/nand_img"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/rel2"
+                android:orientation="vertical"
+                android:layout_below="@id/rel_top"
+                android:paddingTop="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/login_userName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:drawablePadding="14dp"
+                    android:textSize="20sp"
+                    android:hint="@string/username"/>
+
+                <EditText
+                    android:id="@+id/login_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="14dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/passowrd"
+                    android:textSize="20sp"
+
+                    android:inputType="textPassword" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="8dp" >
+
+                    <CheckBox
+                        android:id="@+id/show_hide_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/show_pwd"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/forgot_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:padding="5dp"
+                        android:textColor="@color/colorLightRed"
+                        android:text="@string/forgot"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/login_btn"
+                    android:textSize="20sp"
+                    android:background="@color/colorDarkGreen"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    android:text="@string/login"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="20dp"/>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

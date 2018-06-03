@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:id="@+id/rel_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+
+                    <TextView
+                        android:id="@+id/textview"
+                        android:gravity="center"
+                        android:text="Welcome To Dhwani Rural"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rel_middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_below="@id/rel_top">
+
+                    <ImageView
+                        android:id="@+id/image"
+                        android:src="@drawable/dhwanilogo"
+                        android:scaleType="fitXY"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin_bottom"
+                    android:layout_below="@id/rel_middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/rel1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/profile_image1"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/logo"/>
+
+                        <ImageView
+                            android:id="@+id/profile_image2"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/logo"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/rel2"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/profile_image3"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/logo"/>
+
+                        <ImageView
+                            android:id="@+id/profile_image4"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/logo"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/rel3"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="250dp"
+                        android:layout_height="50dp">
+
+                        <Button
+                            android:id="@+id/btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="sync"
+                            android:textSize="20sp"
+                            android:textColor="#ffffff"
+                            android:background="#FF0000"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lin_bottom">
+
+                    <TextView
+                        android:id="@+id/country"
+                        android:text="@string/select_state"
+                        android:layout_marginTop="30dp"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/state"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="0dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_toRightOf="@id/country"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:layout_marginTop="30dp"
+                        android:layout_below="@id/state"
+                        android:id="@+id/editText_state"
+                        android:hint="@string/hint_city_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:layout_marginTop="30dp"
+                        android:id="@+id/create"
+                        android:layout_below="@id/editText_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/city_name" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+<android.support.design.widget.NavigationView
+    android:id="@+id/design_navigation_view"
+    app:headerLayout="@layout/header"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:itemTextColor="@color/darkgray"
+    app:itemIconTint="@color/darkgray"
+    app:menu="@menu/drawermenu"
+    android:layout_gravity="start">
+
+</android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>
