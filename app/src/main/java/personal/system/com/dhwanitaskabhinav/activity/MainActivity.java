@@ -32,7 +32,7 @@ import android.view.MenuItem;
 
 
 public class MainActivity extends AppCompatActivity {
-    EditText editText1,editText2;
+    EditText editText2;
     Spinner state;
     Button create;
     StateAdapter adapter;
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if(id==R.id.logout)
                 {
-                    Toast.makeText(MainActivity.this, "logout", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "successfully logout", Toast.LENGTH_SHORT).show();
                     Call<StateResponseModel> call = apiService.doLogout(Prefs.getToken());
                     call.enqueue(new Callback<StateResponseModel>() {
                         @Override

@@ -52,6 +52,7 @@ public class LoginActivity extends AppCompatActivity {
                             Prefs.saveToken(response.body().getToken());
                             Prefs.setLoggedIn(true);
                             startActivity(new Intent(LoginActivity.this,MainActivity.class));
+                                Toast.makeText(LoginActivity.this, "login success", Toast.LENGTH_SHORT).show();
                             }
                             else
                             {
