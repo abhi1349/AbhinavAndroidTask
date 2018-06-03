@@ -8,11 +8,7 @@ import personal.system.com.dhwanitaskabhinav.R;
 
 
 public class MyApplication extends Application {
-//    private static MyApplication singleton;
     private static SharedPreferences myPreferences;
-//    public static MyApplication getInstance() {
-//        return singleton;
-//    }
 
     @Override
     public void onCreate() {

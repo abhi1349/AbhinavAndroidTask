@@ -1,11 +1,9 @@
 package personal.system.com.dhwanitaskabhinav.app;
 
-import android.content.Context;
 import android.content.SharedPreferences;
 
 public class Prefs {
     private static  String IS_LOGIN="is_login";
-//    private boolean isLoggedIn;
     private static SharedPreferences sharedPref = MyApplication.getPreferences();
 
     public static boolean isLoggedIn() {

@@ -3,7 +3,7 @@ package personal.system.com.dhwanitaskabhinav.rest;
 import java.util.Map;
 
 import personal.system.com.dhwanitaskabhinav.model.BaseApiResponseModel;
-import personal.system.com.dhwanitaskabhinav.model.Example1;
+import personal.system.com.dhwanitaskabhinav.model.StateResponseModel;
 import personal.system.com.dhwanitaskabhinav.model.LoginResponseModel;
 import retrofit2.Call;
 import retrofit2.http.FieldMap;
@@ -20,7 +20,7 @@ public interface ApiInterface {
             @FieldMap Map<String, String> params);
 
     @GET("master/get-state")
-    Call<Example1> getStateResult(@Header("token") String token);
+    Call<StateResponseModel> getStateResult(@Header("token") String token);
 
     @FormUrlEncoded
     @POST("district/create")
@@ -28,7 +28,7 @@ public interface ApiInterface {
                                               @FieldMap Map<String, String> params, @FieldMap Map<String,Integer> params2);
 
     @GET("user/logout")
-    Call<Example1> doLogout(@Header("token") String token);
+    Call<StateResponseModel> doLogout(@Header("token") String token);
 
 }
 
